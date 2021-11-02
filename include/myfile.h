@@ -1,6 +1,6 @@
 #ifndef _MYFILE_H
 #define _MYFILE_H
 
-void sgs_clib_convert_to_upper(char *message);
+char * sgs_clib_strstr(const char *haystack, const char *needle);
 
 #endif

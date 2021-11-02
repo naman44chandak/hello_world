@@ -1,14 +1,24 @@
 #include <stdio.h>
 #include "../include/myfile.h"
 
-void sgs_clib_convert_to_upper(char *message){
+char * sgs_clib_strstr(const char *haystack, const char *needle)
+{
+    char* point;
 
-    for(;*message != '\0';){
+    int length=strlen(needle);
+    
+    for(;*haystack!='\0';haystack++)
+    {
+        if(*haystack==*needle)
+        {
+            int j;
+            for(j=0;*haystack==*needle && needle[j]!='\0'; j++,haystack++);
 
-        if((*message >= 97) && (*message<= 122)){
-            *message = *message - 32;
+            if(j==length)
+                return point;
+
         }
-        message++;
-
     }
+
+    return "(null)";
 }
